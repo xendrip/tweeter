@@ -8,6 +8,7 @@ textarea {
   width: 100%;
   height: 50px;
   font-weight: 300;
+  font-size: large;
 }
 
 .counter {
@@ -17,7 +18,7 @@ textarea {
 #button-counter {
   display: flex;
   justify-content: space-between;
-  font-family: "Bungee", sans-serif;
+  font-family: 'Bungee', sans-serif;
 } 
 
 button {

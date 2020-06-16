@@ -4,7 +4,7 @@ header {
   height: 400px;
   width: 100%;
   background-color: #520691;
-  background-image: url("https://www.transparenttextures.com/patterns/dust.png");
+  background-image: url('https://www.transparenttextures.com/patterns/dust.png');
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
