@@ -1,4 +1,5 @@
 nav {
+  display: flex;
   position: fixed;
   top: 0;
   right: 0;
@@ -8,9 +9,18 @@ nav {
   z-index: 3;
   background-color: #4056A1;
   padding: 1.5em;
+  color: #FFFFFF;
+  justify-content: space-between;
 }
 
-nav span {
-  font-family: 'Bungee', sans-serif;
-  color: #ffffff;
+#compose-tweet {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Source Sans Pro', sans-serif;
+  align-items: center;
+}
+
+.fa-angle-double-down {
+  display: flex;
+  color: rgb(255, 166, 0);
 }
