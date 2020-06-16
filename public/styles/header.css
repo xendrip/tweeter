@@ -15,12 +15,12 @@ div {
   color: white;
 }
 
-#first-name {
+h2 b {
   font-weight: 600;
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-#last-name {
+h2 {
   font-weight: 300;
   font-family: 'Source Sans Pro', sans-serif;
 }
