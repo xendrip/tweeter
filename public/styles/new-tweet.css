@@ -68,8 +68,8 @@ output {
 
 .tweet header {
   display: flex;
-  /* flex-direction: row; */
-  /* justify-content: space-between; */
+  flex-direction: row;
+  justify-content: space-between;
   /* align-items: baseline; */
   width: 100%;
 }
@@ -80,10 +80,16 @@ output {
 }
 
 .userInfo {
-  /* display: flex; */
+  display: flex;
+  justify-content: flex-start;
   font-size: 20px;
   color: #545149;
   padding: 10px 0 0 15px;
+}
+
+.userInfo span {
+  display: flex;
+  padding-left: 5px;
 }
 
 .user-handle {
