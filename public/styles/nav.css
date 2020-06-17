@@ -8,6 +8,7 @@ nav {
   padding: 1.5em;
   color: #FFFFFF;
   justify-content: space-between;
+  top: 0;
 }
 
 #compose-tweet {
