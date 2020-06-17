@@ -13,10 +13,14 @@ html {
 /*
  * Global layout stuff
  */
+ nav {
+  font-family: 'Bungee', sans-serif;
+ }
 
 body {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   color: #545149;
   background-color: #f4f1ec;
@@ -27,16 +31,13 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
- nav {
-  font-family: 'Bungee', sans-serif;
- }
 
  main .container {
   display: flex;
   background-color: #f4f1ec;
   width: 90%;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
  }
 
  
