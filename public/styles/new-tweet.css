@@ -1,5 +1,6 @@
 textarea {
-  border-bottom: 5px solid #545149 ;
+  display: flex;
+  border-bottom: 5px solid #545149;
   border-top: none;
   border-right: none;
   border-left: none;
@@ -19,6 +20,7 @@ textarea {
   display: flex;
   justify-content: space-between;
   font-family: 'Bungee', sans-serif;
+  padding-top: 10px;
 } 
 
 button {
@@ -31,4 +33,81 @@ button {
 output {
   display: flex;
   color: #545149;
+}
+
+.new-tweet {
+  padding-bottom: 50px;
+}
+
+.tweet-container {
+  display: flex;
+  /* justify-content: space-between; */
+  /* flex-direction: column; */
+  padding-top: 100px 0;
+}
+
+.tweet {
+  display: flex;
+  border: 3px solid #545149 ;
+  /* width: 100%; */
+  margin-bottom: 30px;
+  flex-direction: column;
+}
+
+.tweet:hover {
+  box-shadow: 10px 10px #4056A1;
+}
+
+.tweet .hide {
+  visibility: hidden;
+}
+
+.tweet:hover .hide {
+  visibility: visible;
+}
+
+.tweet header {
+  display: flex;
+  /* flex-direction: row; */
+  /* justify-content: space-between; */
+  /* align-items: baseline; */
+  width: 100%;
+}
+
+.tweet header img {
+  width: 8%;
+  height: 100%;
+}
+
+.userInfo {
+  /* display: flex; */
+  font-size: 20px;
+  color: #545149;
+  padding: 10px 0 0 15px;
+}
+
+.user-handle {
+  /* display: flex; */
+  font-size: 20px;
+  padding: 10px 25px 0 0;
+  color: #545149;
+}
+
+.tweet .tweet-text {
+  /* display: flex; */
+  /* align-items: flex-start; */
+  margin-top: 30px;
+  width: 98%;
+  border-bottom: 3px solid #545149;
+  padding: 10px;
+  color: #545149;
+  font-size: 20px;
+}
+
+.tweet footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+  font-size: 15px;
 }

@@ -36,18 +36,20 @@
     <div><i class='fa fa-angle-double-down'></i></div>
     </div>
     </nav>
-    <header>
+    <header class='profile-header'>
       <div>
           <img src='/images/profile-hex.png'> 
       </div>
       <br>
       <div>
-          <h2><b>Augustus</b> De La Fuego</h2>
+          <h2><b>Augustus</b> de la Fuego</h2>
       </div>
-  </header>
+    </header>
 
     <!-- Page-specific (main) content here -->
     <main class='container'>
+      <!-- Tweet form (input) -->
+
       <section class='new-tweet'>
         <h2>Compose Tweet</h2>
         <form method='POST' action='/tweets'>
@@ -58,6 +60,29 @@
             <output name='counter' class='counter' for='tweet-text'>140</output>
           </div>
         </form>
-      </section></main>
+      </section>
+      <section id="tweet-container">
+          <article class="tweet">
+            <header>
+            <div class="userInfo hide">
+              <img class="avatar" src="/images/profile-hex.png">
+              <span>Micky</span>
+            </div>
+            <small class="user-handle hide">@MArugala</small>
+            </header>
+            <div class="tweet-text">
+              <p>Testing tweet functionality</p>
+            </div>
+            <footer>
+              <small class=>1 hour ago</small>
+              <span class="reaction">
+                <i class="fas fa-flag"></i>
+                <i class="fas fa-retweet"></i>
+                <i class="fas fa-heart"></i>
+              </span>
+            </footer>
+          </article>
+      </section>
+    </main>
   </body>
 </html>
