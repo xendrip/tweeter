@@ -101,6 +101,28 @@
 // $('#tweet-container').append($tweet);
 
 $(document).ready(function() {
-  renderTweets(data);
 
+  // $('form').on('submit', function (event) {
+  //   const form = $('form');
+  //   form.on('submit', (event) => {
+  //     event.preventDefault();
+  //     const messageText = form.children('textarea').val();
+  //   }
+    
+
+  $('form').on('submit', function (event) {
+
+    event.preventDefault();
+
+    const data = $('form').serialize();
+    console.log(data);
+    $.post('/tweets', data);
+    // $.ajax('/tweets', {
+    //   method: "POST",
+    //   data: $(this).serialize()
+    // }).then(response => console.log('response is', response));
+
+  });
+
+  renderTweets(data);
 });
