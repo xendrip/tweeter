@@ -3,7 +3,19 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-  
+
+const validateTweet = (text) => {
+  if (!text.length) {
+    alert('Empty tweet, Try again');
+    return false;
+  }
+  if (text.length > 140) {
+    alert('Your tweet is too long');
+    return false;
+  }
+  return true;
+};
+
 const renderTweets = (tweets) => {
   for (let tweet of tweets) {
     const $tweetContent = createTweetElement(tweet);
@@ -54,12 +66,14 @@ $(document).ready(function() {
   $('form').on('submit', function (event) {
     event.preventDefault();
     const data = $('form').serialize();
-    console.log(data);
-    $.post('/tweets', data)
-      .then(() => {
-        $('#tweet-text').val('');
-        loadTweets();
-      });
+    const tweetText = $('#tweet-text').val();
+    if (validateTweet(tweetText)) {
+      $.post('/tweets', data)
+        .then(() => {
+          $('#tweet-text').val('');
+          loadTweets();
+        });
+      }
   });
 
   loadTweets();
