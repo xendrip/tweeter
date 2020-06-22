@@ -23,9 +23,11 @@ body {
   justify-content: space-between;
   align-items: center;
   color: #545149;
-  background-color: #f4f1ec;
+  background-color: #1d1e22;;
+  background-image: url("https://www.transparenttextures.com/patterns/foggy-birds.png");;
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
+  position: relative;
 }
 
 /*
@@ -33,13 +35,98 @@ body {
  */
 
  main .container {
+  transform: translateX(-50%);
   display: flex;
   background-color: #f4f1ec;
   width: 90%;
   flex-direction: column;
   justify-content: space-between;
+  margin-top: 70px;
  }
 
+ /* ------------------ */
+ @media only screen and (max-width: 420px) {
  
+  #nav-bar {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
 
- 
+  #compose-tweet, #arrow {
+    visibility: hidden;
+    position: absolute;
+    right: 0; 
+  }
+}
+
+ @media only screen and (min-width: 768px) {
+
+  main.container {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    padding-left: 30px;
+  }
+
+  section.new-tweet.hide {
+    position: sticky; 
+  }
+
+  section#tweet-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    float: right
+  }
+
+ .new-tweet label {
+    font-size: 80%;
+ }
+
+  article.tweet {
+    width: 75%;
+  }
+
+  .footer {
+    clear: right;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+
+ body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #393f4d;
+  }
+  #nav-bar {
+  background-color: #1d1e22;
+  color: #feda6a;
+  }
+  header {
+    place-self: flex-start;
+    border-radius: 50px;
+  }
+  header.profile-header { 
+    position: sticky;
+    background-size: 50% 50%;
+    background-color: #1d1e22;
+    top: 300px;
+    transform: scale(0.75);
+  }
+  main.container{
+    flex-direction: column;
+    transform: initial;
+    margin-top: 150px;
+    margin-right: 3em;
+  }
+ .new-tweet {
+  position: sticky;
+  margin-top: 25px;
+  z-index: 3;
+ }
+ #tweet-container {
+  right: 0;
+ }
+}

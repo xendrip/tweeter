@@ -2,6 +2,7 @@
 <html lang='en'>
   <head>
     <!-- Meta Information -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Tweeter - Home Page</title>
 
     <!-- External CSS -->
@@ -15,7 +16,6 @@
     <link rel='stylesheet' href='/styles/header.css' type='text/css' />
     <link rel='stylesheet' href='/styles/new-tweet.css' type='text/css' />
     
-
     <!-- External JS -->
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
@@ -29,28 +29,30 @@
 
   <body>
     <!-- Top nav bar (fixed) -->
-    <nav>
-    <span>tweeter</span>
-    <div id='compose-tweet'>
-    <span><b>Write</b> a new tweet</span>
-    <div><i class='fa fa-angle-double-down'></i></div>
-    </div>
+    <nav id="nav-bar">
+      <span>tweeter</span>
+      <div id='compose-tweet'>
+        <span><b>Write</b> a new tweet</span>
+        <div id='arrow'>
+          <i class='fa fa-angle-double-down'></i>
+        </div>
+      </div>
     </nav>
+
     <header class='profile-header'>
       <div>
-          <img src='/images/profile-hex.png'> 
-      </div>
-      <br>
+        <img class="logo" src='/images/profile-hex.png'> 
+      </div> 
       <div>
-          <h2><b>Augustus</b> de la Fuego</h2>
+        <h2><b>Augustus</b> de la Fuego</h2>
       </div>
     </header>
-
+    
     <!-- Page-specific (main) content here -->
     <main class='container'>
-      <!-- Tweet form (input) -->
-
+      
       <section class='new-tweet'>
+        <p class="error"></p>
         <h2>Compose Tweet</h2>
         <form method='POST' action='/tweets'>
           <label for='tweet-text'>What are you humming about?</label>
@@ -61,8 +63,10 @@
           </div>
         </form>
       </section>
-      <section id="tweet-container">
-      </section>
+
+      <section id="tweet-container"></section>
+      <footer id="footer"></footer>
+
     </main>
   </body>
 </html>
