@@ -1,7 +1,7 @@
-$(document).ready(function() {
+$(document).ready(function () {
   //stackoverflow 'how to get textarea text jquery'
   const textArea = $('#tweet-text');
-  textArea.on('keyup', function() {
+  textArea.on('keyup', function () {
     const charCount = $('.counter');
     //stackoverflow 'jquery textarea character count'
     const tweetLength = $(this).val().length;

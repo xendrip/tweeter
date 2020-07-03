@@ -23,18 +23,17 @@ const validateTweet = (text) => {
 const renderTweets = (tweets) => {
   for (let tweet of tweets) {
     const $tweetContent = createTweetElement(tweet);
-    $('#tweet-container').prepend($tweetContent); 
-  } 
+    $('#tweet-container').prepend($tweetContent);
+  }
 };
-
 //take in tweet object, return tweet <article> element containing entire HTML structure
 const createTweetElement = (tweetData) => {
   const { name, avatars, handle } = tweetData.user;
   const { text } = tweetData.content;
   const createdTime = tweetData.created_at;
 
-  //not my code
-  const escape =  (str) => {
+  //Source: https://web.compass.lighthouselabs.ca/days/w04d3/activities/497
+  const escape = (str) => {
     let div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
@@ -60,19 +59,18 @@ const createTweetElement = (tweetData) => {
       </span>
     </footer>
   </article>`;
-
 };
 
 const loadTweets = () => {
   $.get('/tweets')
-    .then((data) => { 
+    .then((data) => {
       $('#tweet-container').empty();
       renderTweets(data);
     });
 };
 
 // ------------------------ //
-$(document).ready(function() {
+$(document).ready(function () {
 
   $('form').on('submit', function (event) {
     event.preventDefault();
@@ -82,10 +80,12 @@ $(document).ready(function() {
       $.post('/tweets', data)
         .then(() => {
           $('#tweet-text').val('');
+          const charCount = $('.counter');
+          const counter = 140;
+          charCount.text(counter);
           loadTweets();
         });
-      }
+    }
   });
-
   loadTweets();
 });
